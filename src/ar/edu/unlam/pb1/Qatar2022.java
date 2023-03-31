@@ -87,15 +87,21 @@ public class Qatar2022 {
 	private static void comprarSobre(Scanner teclado, Album actual) {
 		Figurita compradas[] = actual.comprarSobre();
 		
-		System.out.println("Las figuritas son");
-
+		System.out.println("Las figuritas son: ");
+		
 		/*
 		 * Mostrar las figuritas obtenidas
 		 */
+		for (int i = 0; i < compradas.length; i++) {
+			compradas[i].toString();
+		}
 		
 		/* 
-		 * Por cada figuria comprada, agregarlas al album actual actual.agregarFigurita(compradas[i]);
+		 * Por cada figurita comprada, agregarlas al album actual actual.agregarFigurita(compradas[i]);
 		 */
+		for (int i = 0; i < compradas.length; i++) {
+			actual.agregarFigurita(compradas[i]);
+		}
 		
 	}
 	
@@ -103,6 +109,8 @@ public class Qatar2022 {
 		/*
 		 * Se deben mostrar las figuritas que posee el usuario de manera ordenada.
 		 */
+		actual.ordenarFiguritasActuales();
+		actual.mostrarFiguritasOrdenadas();
 	}
 	
 	private static void calcularElPorcentajeDeCompletado(Scanner teclado, Album actual) {

@@ -51,6 +51,14 @@ public class Figurita {
 	public void setValor(double valor) {
 		this.valor = valor;
 	}
+
+	@Override
+	public String toString() {
+		return "Figurita [codigo=" + codigo + ", grupo=" + grupo + ", seleccion=" + seleccion + ", nombreJugador="
+				+ nombreJugador + ", valor=" + valor + "]";
+	}
+	
+	
 	
 
 }
